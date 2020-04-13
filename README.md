@@ -16,9 +16,20 @@ Click here to visit the application.
 3) Run command <code>npm start</code> to start the application in the development mode.
 ## Glimpses
 Once you run the application, the Today list appears. This is a general list.
-![Today List](images/todaylist)
-We can add items to the list by clicking the + button. To delete the items, check the checkbox on the left.
-Custom lists can be created by adding the title of your list as a route to the base URL. We can add and delete the items from this list too. 
+
+![](images/todaylist.png)
+
+We can add items to the list by clicking the + button.
+
+![](images/additem.png)
+
+To delete the items, check the checkbox on the left.
+
+![](images/deleteitem.png)
+
+Custom lists can be created by adding the title of your list as a route to the base URL. We can add and delete the items from this list too. If you revisit the URL again, the custom list along with all the added items remains saved.
+
+![](images/customlist.png)
 
 ## Technologies used
 1) **Node.js**: To make the frontend web application.
