@@ -1,15 +1,13 @@
 const mongoose = require('mongoose');
 
 /**
+ * TODO:
  * Define item schema
  * It will contain the following fields
  * name
  */
-const itemsSchema = mongoose.Schema({
-	name: String,
-});
 
-// Create model based on item schema
-const Item = mongoose.model('item', itemsSchema);
+// TODO: Create model based on item schema
+
 
 module.exports = { Item, itemsSchema };

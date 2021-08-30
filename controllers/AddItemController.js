@@ -11,30 +11,14 @@ const addItemController = (req, res) => {
 	const itemName = req.body.newItem;
 	const listName = req.body.list;
 
-	// Create new item object
-	const item = new Item({
-		name: itemName,
-	});
+	// TODO: Create new item object
+	
 
 	/**
+	 * TODO:
 	 * Check the listName and save the item in the appropriate list
 	 * Redirect user to the same list
 	 */
-	if (listName == d.getDate()) {
-		item.save();
-		res.redirect('/');
-	} else {
-		List.findOne({ name: listName }, (err, foundList) => {
-			if(err) {
-				console.log(err);
-				res.redirect('/' + listName);
-			} else {
-				foundList.items.push(item);
-				foundList.save();
-				res.redirect('/' + listName);
-			}
-		});
-	}
 };
 
 module.exports = { addItemController };

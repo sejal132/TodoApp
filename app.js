@@ -1,13 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const DisplayListController = require("./controllers/DisplayListController");
-const AddItemController = require("./controllers/AddItemController");
-const DeleteItemController = require("./controllers/DeleteItemController");
 
-// Connected to mongodb database
-mongoose.connect("mongodb://localhost:27017/todoappDB", {
-  useNewUrlParser: true,
-});
+// TODO: Connect to mongodb database
+
 
 // Initialized app
 const app = express();
@@ -18,17 +13,17 @@ app.use(express.urlencoded());
 app.use(express.json());
 app.use(express.static("public"));
 
-// Display TODO list
-app.get("/", DisplayListController.displayListController);
+// TODO: Display TODO list
 
-// Display custom TODO list
-app.get("/:customListName", DisplayListController.displayCustomListController);
 
-// Add an item to the list
-app.post("/", AddItemController.addItemController);
+// TODO: Display custom TODO list
 
-// Delete an item from the list
-app.post("/delete", DeleteItemController.deleteItemController);
+
+// TODO: Add an item to the list
+
+
+// TODO: Delete an item from the list
+
 
 // Start the server
 app.listen(3000, () => {

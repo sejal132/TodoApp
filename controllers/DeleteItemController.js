@@ -12,32 +12,10 @@ const deleteItemController = (req, res) => {
 	const listName = req.body.listName;
 
 	/**
+	 * TODO:
 	 * Check the list name and find and delete the item from the appropriate list
 	 * Redirect user to updated list
 	 */
-	if (listName === d.getDate()) {
-		Item.findByIdAndRemove(checkedItem, err => {
-			if (err) {
-				console.log(err);
-			} else {
-				console.log('Deleted successfully');
-			}
-			res.redirect('/');
-		});
-	} else {
-		List.findOneAndUpdate(
-			{ name: listName },
-			{ $pull: { items: { _id: checkedItem } } },
-			(err, foundList) => {
-				if (err) {
-					console.log(err);
-				} else {
-					console.log('Deleted successfully');
-				}
-				res.redirect('/' + listName);
-			}
-		);
-	}
 };
 
 module.exports = { deleteItemController };
